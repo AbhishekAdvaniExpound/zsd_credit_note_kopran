@@ -1,0 +1,24 @@
+specVersion: "4.0"
+metadata:
+  name: zsdcreditnote
+type: application
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**
+  customTasks:
+    - name: deploy-to-abap
+      afterTask: generateCachebusterInfo
+      configuration:
+        target:
+          destination: BAS_CONNECT_NEW
+          url: https://my430721.s4hana.cloud.sap
+          scp: true
+          authenticationType: reentranceTicket
+        app:
+          name: ZSD_CREDIT_NOTE
+          package: ZSD_CREDITNOTE
+          transport: CZFK900041
+        exclude:
+          - /test/
