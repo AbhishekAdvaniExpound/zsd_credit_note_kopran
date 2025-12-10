@@ -134,6 +134,14 @@
                     "text": "Print Preview",
                     "press": "zsdcreditnote.ext.controller.ListReportExt.Preview",
                     "requiresSelection": true
+                  },
+                  "PrintPreview2": {
+                    "id": "PrintPreview2Button",
+                    "text": "PRINTPREVIEW2",
+                    "press": "zsdcreditnote.ext.controller.ListReportExt.PrintPreview2",
+                    "requiresSelection": true,
+                    "enabled": true,
+                    "visible": true
                   }
                 }
               }
